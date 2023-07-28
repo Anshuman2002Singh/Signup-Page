@@ -27,10 +27,10 @@ app.post("/", function (req, res) {
         ]
     }
     const JSONDATA = JSON.stringify(data);                      //converting the data into JSON format
-    const url = "https://us21.api.mailchimp.com/3.0/lists/4240694ced";
+    const url = "https://us21.api.mailchimp.com/3.0/lists/4240694ced";        // Replace the audience id(4240694ced) with yours
     const options = {
         method: "POST",
-        auth: "anshu:2af1acd3567b0d0ea30ed3936171a3a9-us21"
+        auth: "anshu:2af1acd3567b0d0ea30ed3936171a3a9-us21"                    // replace this with your own API KEY
     }
     const request = https.request(url, options, function (response) {               // For posting the data entered on our website to mailchimps server
         response.on("data", function (data) {
